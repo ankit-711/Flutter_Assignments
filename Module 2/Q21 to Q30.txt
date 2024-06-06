@@ -1,0 +1,91 @@
+Q.21  What is inheritance?
+
+-->  Inheritance is a mechanism in object-oriented programming that allows one class
+     to inherit the properties and behavior of another class. This enables code reusability 
+     and establishes a hierarchical relationship between classes where the subclass can access
+     and extend the functionality of the superclass.
+
+Q.22  Which inheritance is not supported by Dart? Why? What is advantage of inheritance?
+
+-->  Dart does not support multiple inheritance. This is because it can lead to ambiguity and
+     complexities in the code, as conflicting methods and attributes from different parent classes
+     may be inherited by the child class.
+
+     The advantage of inheritance is that it promotes code reusability and organizational structure
+     in object-oriented programming. By inheriting attributes and methods from a parent class, a child 
+     class can inherit and build upon existing functionality without duplicating code. This can lead 
+     to more efficient and maintainable code, as changes made to the parent class will automatically 
+     be reflected in all child classes. 
+
+Q.23  Difference between inheritance and encapsulation. Difference between inheritance and abstraction.
+
+-->  Inheritance and Encapsulation :- Inheritance is a mechanism for code reuse and defining relationships 
+     between classes, while encapsulation is a concept that focuses on data hiding and implementation details.
+
+     Inheritance deals with the relationship between classes, while encapsulation focuses on data protection 
+     and information hiding within a single class.
+
+-->  Inheritance and Abstraction :- Inheritance allows a subclass to inherit properties and methods from 
+     a superclass, promoting code reuse and extending functionality. Abstraction, on the other hand, involves 
+     hiding the implementation details of a class and only showing the essential features and behavior.
+
+     Inheritance is a way to establish relationships between classes, while abstraction is a way to create 
+     a simplified representation of a complex system.
+
+Q.24  Difference between inheritance and polymorphism.
+
+-->  Inheritance refers to the mechanism by which a class can inherit properties and behavior from another class.
+     It allows a subclass to reuse properties and methods of a superclass, thereby promoting code reusability and 
+     reducing redundancy.
+
+     Polymorphism, on the other hand, refers to the ability of an object to take on multiple forms or to respond 
+     to messages in different ways. It allows objects of different classes to be treated as objects of a common 
+     superclass, enabling flexibility and extensibility in the code.
+
+     In summary, inheritance is about establishing relationships between classes, while polymorphism is about how 
+     objects of different classes can be treated interchangeably.
+
+Q.25  Can we override static method in Dart?
+
+-->  No, static methods cannot be overridden in Dart. Static methods belong to the class itself, not to instances 
+     of the class, so they cannot be overridden by subclasses.  
+
+Q.26  Can we overload static method in Dart?
+
+-->  No, you cannot overload static methods in Dart. Dart does not support method overloading, which means you 
+     cannot have multiple methods with the same name but different parameters in the same class, even if one 
+     of them is static. Each method must have a unique name within the class.
+
+Q.27  Can a class implement more than one interface? Can a class extend more than one class in Dart?
+
+-->  Yes, a class can implement more than one interface in Dart. This allows a class to inherit the behavior 
+     specified by multiple interfaces.
+
+     However, Dart does not support multiple inheritance for classes, so a class cannot extend more than one 
+     class. Instead, Dart uses mixins to achieve similar functionality by allowing a class to inherit behavior 
+     from multiple sources through the use of mixins.
+
+Q.28  Can an interface extend more than one interface in Dart?
+
+-->  No, Dart does not support multiple inheritance for interfaces. In Dart, a class or interface can only 
+     inherit from one superclass or interface. However, a class can implement multiple interfaces by using 
+     the implements keyword.
+
+Q.29  What will happen if a class implements two interfaces and they both have a method with same name and signature?
+
+-->  If a class implements two interfaces that both have a method with the same name and signature, the class 
+     will have to provide an implementation for that method. The class cannot have two different implementations 
+     for the same method name and signature, so it must decide which interface's method implementation to use.
+
+     One option would be to explicitly implement the method from one of the interfaces, and then call that 
+     implementation from within the method implementation for the other interface. Another option would be to 
+     create a new implementation that combines the functionality of both methods.
+
+Q.30  Can we pass an object of a subclass to a method expecting an object of the super class? Are static members 
+      inherited to sub classes?
+
+-->  Yes, we can pass an object of a subclass to a method expecting an object of the super class. This is because 
+     a subclass is a more specific type of the super class, so it can be used wherever the super class is expected.
+
+     Static members in a superclass are inherited to subclasses, but they are accessed using the superclass name 
+     rather than the subclass name.

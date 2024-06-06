@@ -1,0 +1,119 @@
+Q.31  What happens if the parent and the child class have a field with same identifier? 
+      Are constructors and initializers also inherited to sub classes?
+
+-->  If the parent and child classes both have a field with the same identifier, the field 
+     in the child class will override the field in the parent class. This is known as hiding 
+     fields, and it can cause confusion and potential issues if not managed properly.
+
+     Constructors and initializers are not inherited by sub-classes. Each class, including 
+     sub-classes, must have their own constructor to initialize the fields of that class. 
+     Sub-classes can call the constructor of the parent class using the super keyword to 
+     initialize the fields of the parent class.
+
+Q.32  How do you restrict a member of a class from inheriting by its sub classes?
+
+-->  In Dart, you can restrict a member of a class from being inherited by its subclasses by 
+     using the 'final' or 'const' keywords when declaring the member. By marking a member as 'final' 
+     or 'const', you are indicating that the member cannot be overridden by subclasses.
+
+Q.33  How do you implement multiple inheritance in Dart?
+
+-->  In Dart, multiple inheritance is not supported directly. Dart only supports single inheritance 
+     where a class can inherit from one superclass. However, you can achieve a form of multiple 
+     inheritance using mixins.
+
+     Mixins allow you to reuse code in multiple classes without the need for inheritance. To use 
+     mixins in Dart, you can use the 'with' keyword followed by the mixin class name when defining a class.
+
+Q.34  Can a class extend by itself in Dart?
+
+-->  No, a class in Dart cannot extend itself. A class cannot inherit from itself, as it would create a 
+     circular dependency and lead to infinite recursion.
+
+Q.35  How do you override a private method in Dart?
+
+-->  In Dart, you cannot directly override a private method of a superclass in a subclass because private 
+     members are only accessible within the same library. However, you can create a public method in the 
+     subclass with the same name as the private method in the superclass, effectively shadowing it. 
+
+Q.36  When to overload a method in Dart and when to override it?
+
+-->  It is important to overload a method in Dart when you want to provide multiple ways of calling the 
+     same method with different parameters or return types within the same class. This can be useful when 
+     you want to offer flexibility and convenience to the users of your class.
+
+     On the other hand, it is important to override a method in Dart when you want to change the behavior 
+     of a method in the subclass. This can be useful when you want to provide a specialized implementation 
+     of a method in the subclass that is specific to that class.
+
+Q.37  What the order is of extends and implements keyword on Dart class declaration? 
+
+-->  The 'extends' keyword is used to specify a superclass that a class is inheriting from. This keyword comes 
+     first in the class declaration, followed by the name of the superclass.
+
+     The 'implements' keyword is used to specify one or more interfaces that a class is implementing. This keyword
+     comes after the extends keyword, if present, followed by a list of interface names separated by commas.
+
+Q.38  How do you prevent overriding a Dart method without using the final modifier?
+
+-->  To prevent overriding a Dart method without using the final modifier, you can make the method private by 
+     prefixing its name with an underscore. This way, subclasses will not be able to override the method because 
+     it will not be visible to them.
+
+Q.39  What are the rules of method overriding in Dart?
+
+-->  The method in the subclass must have the same name, return type, and parameters as the method in the superclass.
+     The method in the subclass must be marked with the @override annotation.
+     The method in the subclass must be at least as accessible as the method in the superclass.
+     The method in the subclass must not be marked as final.
+     The method in the subclass cannot override a method that is marked as static or final in the superclass.
+     The method in the subclass cannot have a different number of required parameters than the method in the superclass.
+     The method in the subclass can have optional parameters with default values, and the default values must match those 
+     of the superclass method, if any.
+
+Q.40  Difference between method overriding and overloading in Dart.
+
+-->  Method overloading in Dart refers to the ability to define multiple methods in the same class with the same name but 
+     different parameters. Dart does not support method overloading by default, so it is not directly possible to create 
+     multiple methods with the same name but different parameters.
+
+     On the other hand, method overriding in Dart refers to the ability to define a method in a subclass that is already 
+     defined in the superclass. The subclass method must have the same name, return type, and parameters as the superclass 
+     method in order to override it. This allows the subclass to provide its own implementation of the method and customize 
+     its behavior.
+
+Q.41  What happens when a class implements two interfaces and both declare field (variable) with same name?
+
+-->  When a class implements two interfaces that both declare a field with the same name in Dart, the class must provide 
+     an implementation for the field that satisfies both interfaces. If the field is declared as final, the class must 
+     initialize the field in its constructor. If the field is not declared as final, the class can choose to either provide 
+     its own implementation of the field or simply inherit the implementation from one of the interfaces.
+
+Q.42  Can a subclass instance method override a superclass static method?
+
+-->  No, a subclass instance method cannot override a superclass static method. In object-oriented programming, static 
+     methods are associated with the class itself rather than instances of the class. Therefore, they cannot be overridden 
+     by instance methods in subclasses. Subclasses can only override instance methods of their superclasses.
+
+Q.43  Can a subclass static method hide superclass instance method?
+
+-->  No, a subclass static method cannot hide a superclass instance method, as they are not related in terms of inheritance. 
+     Static methods belong to the class itself, not to instances of the class, so they are not involved in method overriding
+     or hiding. Instance methods, on the other hand, are inherited by subclasses and can be overridden, but they cannot be 
+     hidden by a static method in the subclass.
+
+Q.44  Can a superclass access subclass member?
+
+-->  No, a superclass cannot access subclass members directly. Subclass members are not visible or accessible to the superclass, 
+     as the subclass extends the superclass and inherits its members and functionality. However, a subclass can access members of 
+     its superclass using inheritance and by calling the superclass's methods or accessing its public members.
+
+Q.45  Difference between object oriented and object based language.
+
+-->  Object-oriented programming languages are those that support the four basic principles of object-oriented programming -
+     encapsulation, inheritance, polymorphism, and abstraction. These languages allow you to create classes, define objects from 
+     those classes, and interact with those objects through their methods and properties.
+
+     On the other hand, object-based programming languages are those that support some features of object-oriented programming, but 
+     do not necessarily support all four principles. These languages may allow you to define objects and classes, but may not support 
+     inheritance or other key features of object-oriented programming.
